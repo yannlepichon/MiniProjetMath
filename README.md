@@ -1,2 +1,0 @@
-# MiniProjetMath
-#test de github
