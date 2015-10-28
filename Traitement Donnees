@@ -30,11 +30,11 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
         end
 
 
-        //*************************************//
-        //                                     //
-        //  Cas de données discrètes GROUPEES  //
-        //                                     //
-        //*************************************//
+    //*************************************//
+    //                                     //
+    //  Cas de données discrètes GROUPEES  //
+    //                                     //
+    //*************************************//
 
     elseif type_data==2 then
         data_weight=tab(2,:) //Récupération des poids ni stockées dans la deuxième colonne du tableau
@@ -51,14 +51,13 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
         end
 
 
-        //*************************************//
-        //                                     //
-        //Cas de données continues NON-GROUPEES//
-        //                                     //
-        //*************************************//
+    //*************************************//
+    //                                     //
+    //Cas de données continues NON-GROUPEES//
+    //                                     //
+    //*************************************//
 
     elseif type_data==3 then
-    end
 
 
     //*************************************//
@@ -67,18 +66,18 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
     //                                     //
     //*************************************//
 
-elseif type_data==4 then
-end
+    elseif type_data==4 then
+    end
+    
+    
+    
+    X=(1/n)*sommeMX //Calcul de la moyenne arithmétique
+    Q=sqrt((1/n)*sommeMQ) //Calcul de la moyenne quadratique
+    G=exp((1/n)*sommeMG) //Calcul de la moyenne géométrique
+    H=((1/n)*sommeMH)^-1 //Calcul de la moyenne harmonique
+    e=(1/n)*sommeEM //Calcul de l'écart-moyen arithmétique
 
-
-
-X=(1/n)*sommeMX //Calcul de la moyenne arithmétique
-Q=sqrt((1/n)*sommeMQ) //Calcul de la moyenne quadratique
-G=exp((1/n)*sommeMG) //Calcul de la moyenne géométrique
-H=((1/n)*sommeMH)^-1 //Calcul de la moyenne harmonique
-e=(1/n)*sommeEM //Calcul de l'écart-moyen arithmétique
-
-//FIN DU TRAITEMENT//
+    //FIN DU TRAITEMENT//
 
 endfunction
 
