@@ -1,0 +1,69 @@
+function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
+
+    data=tab(1,:) //On récupère la 1ere colonne du tableau, celle qui contient les données. Dans le cas de données groupées le tableau dispose d'une deuxième colonne contenant le poids des valeurs.
+    n=length(data) //Permet de récupérer le nombre de valeurs
+
+    sommeMX=0 //Moyenne Arithmétique
+    sommeMQ=0 //Moyenne Quadratique
+    sommeMG=0 //Moyenne Géométrique
+    sommeMH=0 //Moyenne Harmonique
+    sommeEM=0 //Moyenne Ecart Moyen
+
+
+
+//***************************//
+//Cas de données NON-GROUPEES//
+//***************************//
+
+    if type_data==1 then
+        for i=1:n
+            sommeMX=sommeMX+data(i)
+            sommeMQ=sommeMQ+data(i)^2
+            sommeMG=sommeMG+log(data(i))
+            sommeMH=sommeMH+(1/data(i))
+        end
+        X=(1/n)*sommeMX
+        Q=sqrt((1/n)*sommeMQ)
+        G=exp((1/n)*sommeMG)
+        H=((1/n)*sommeMH)^-1
+
+        for i=1:n
+            sommeEM=sommeEM+abs(data(i)-X) //Etape de la somme : E(|xi-X|)
+        end
+
+
+//***************************//
+//  Cas de données GROUPEES  //
+//***************************//
+
+    elseif type_data==2 then
+        data_weight=tab(2,:) //Récupération des poids ni stockées dans la deuxième colonne du tableau
+
+        for i=1:n
+            sommeMX=sommeMX+data_weight(i)*data(i)
+            sommeMQ=sommeMQ+data_weight(i)*data(i)^2
+            sommeMG=sommeMG+data_weight(i)*log(data(i))
+            sommeMH=sommeMH+(data_weight(i)/data(i))
+        end
+        X=(1/n)*sommeMX
+        Q=sqrt((1/n)*sommeMQ)
+        G=exp((1/n)*sommeMG)
+        H=((1/n)*sommeMH)^-1
+
+        for i=1:n
+            sommeEM=sommeEM+data_weight(i)*abs(data(i)-X) //Etape de la somme : E(ni|xi-X|)
+        end
+
+
+//***************************//
+// Cas de données CONTINUES  //
+//***************************//
+
+    elseif type_data==3 then
+    end
+
+    e=(1/n)*sommeEM //Enfin on divise par le nombre de valeurs : e=(1/n)*somme
+
+endfunction
+
+
