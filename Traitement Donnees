@@ -10,9 +10,12 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
     sommeEM=0 //Moyenne Ecart Moyen
 
 
-//***************************//
-//Cas de données NON-GROUPEES//
-//***************************//
+
+//*************************************//
+//                                     //
+//Cas de données discrètes NON-GROUPEES//
+//                                     //
+//*************************************//
 
     if type_data==1 then
         for i=1:n
@@ -31,9 +34,11 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
         end
 
 
-//***************************//
-//  Cas de données GROUPEES  //
-//***************************//
+//*************************************//
+//                                     //
+//  Cas de données discrètes GROUPEES  //
+//                                     //
+//*************************************//
 
     elseif type_data==2 then
         data_weight=tab(2,:) //Récupération des poids ni stockées dans la deuxième colonne du tableau
@@ -54,12 +59,27 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
         end
 
 
-//***************************//
-// Cas de données CONTINUES  //
-//***************************//
+//*************************************//
+//                                     //
+//Cas de données continues NON-GROUPEES//
+//                                     //
+//*************************************//
 
     elseif type_data==3 then
     end
+
+
+//*************************************//
+//                                     //
+//Cas de données continues NON-GROUPEES//
+//                                     //
+//*************************************//
+
+    elseif type_data==4 then
+    end
+    
+    
+//FIN DU TRAITEMENT//
 
     e=(1/n)*sommeEM //Enfin on divise par le nombre de valeurs : e=(1/n)*somme
 
