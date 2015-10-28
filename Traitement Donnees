@@ -9,7 +9,6 @@ function [e,X,Q,G,H]=TraitementDonnees(tab,type_data) //Création d'une fonction
     sommeMH=0 //Moyenne Harmonique
     sommeEM=0 //Moyenne Ecart Moyen
 
-//TESTSTSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 
 //***************************//
 //Cas de données NON-GROUPEES//
