@@ -1,4 +1,4 @@
-function [e,X,Q,G,H]=TraitementDonnees(chemin,type_data) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
+function [X,Q,G,H,e,M1,Mu1,Mu2,Mu3,Mu4]=TraitementDonnees(chemin,type_data) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
 
     //clc
     //clear
