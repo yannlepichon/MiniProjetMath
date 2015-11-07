@@ -90,9 +90,9 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2]=Traitemen
             sommeMG=sommeMG+data_weight(i)*log(data(i));
             sommeMH=sommeMH+(data_weight(i)/data(i));
             sommeM1=sommeM1+data_weight(i)*data(i);
-            sommeM1=sommeM2+data_weight(i)*data(i)^2;
-            sommeM1=sommeM3+data_weight(i)*data(i)^3;
-            sommeM1=sommeM4+data_weight(i)*data(i)^4;
+            sommeM2=sommeM2+data_weight(i)*data(i)^2;
+            sommeM3=sommeM3+data_weight(i)*data(i)^3;
+            sommeM4=sommeM4+data_weight(i)*data(i)^4;
         end
 
         X=(1/n)*sommeMX; //Calcul de la moyenne arithmétique
@@ -191,9 +191,9 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2]=Traitemen
                 sommeMH=sommeMH+(data_weight(i)/c(i));
             end
             sommeM1=sommeM1+data_weight(i)*c(i);
-            sommeM1=sommeM2+data_weight(i)*c(i)^2;
-            sommeM1=sommeM3+data_weight(i)*c(i)^3;
-            sommeM1=sommeM4+data_weight(i)*c(i)^4;
+            sommeM2=sommeM2+data_weight(i)*c(i)^2;
+            sommeM3=sommeM3+data_weight(i)*c(i)^3;
+            sommeM4=sommeM4+data_weight(i)*c(i)^4;
         end
 
         X=(1/n)*sommeMX; //Calcul de la moyenne arithmétique
