@@ -1,18 +1,17 @@
-function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2]=TraitementDonnees(chemin,type_data) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
+function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
 
 
     select type_data
-    case 1 then
+    case 1 then     //Données Discrètes non groupés
         nb_col = 1;
-    case 2 then
+    case 2 then     //Données Discrètes groupés
         nb_col = 2;
-    case 3 then
+    case 3 then     //Données Continues non groupés
         nb_col = 1;
-    case 4 then
+    case 4 then     //Données Continues groupés
         nb_col = 3;
     end
     tab = read(chemin, -1, nb_col);
-
 
     sommeMX=0; //Moyenne Arithmétique
     sommeMQ=0; //Moyenne Quadratique
