@@ -119,9 +119,10 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         data=tab(:,1);
         n=length(data);
 
-        test=sign(data);
-        test2=find(test==-1);
-        if length(test2>0) then
+        //test=sign(data);
+        //test2=find(test==-1);
+        if min(data)<=0 then
+        //if length(test2>0) then
             no_GH=1;
         else
             no_GH=0;
@@ -172,9 +173,10 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         n=sum(data_weight);
         k=length(data);
 
-        test=sign(data);
-        test2=find(test==-1);
-        if length(test2>0) then
+        //test=sign(data);
+        //test2=find(test==-1);
+        if min(data)<=0 then
+        //if length(test2>0) then
             no_GH=1;
         else
             no_GH=0;
