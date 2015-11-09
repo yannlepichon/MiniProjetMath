@@ -1,11 +1,11 @@
-function AffichageLaTexDCG(tab,X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);// Il faut appeler la fonctionner avec le paramètre "tab" en plus
+function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);// Il faut appeler la fonctionner avec le paramètre "tab" en plus
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
         //       Mise en page et présentation       //
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 
     // IINITIALISATION DU DOCUMENT PDF
-
+tab = read('DonneesContinuesGroupees.dat', -1, 2); // à commenter la ligne si le fonctionnement par appel de fonction est OK
 fd=mopen('AffichageLaTexDCG.tex','wt');
 mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{article}\n");
 //mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{amsart}\n");
@@ -70,10 +70,9 @@ mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
 for i=1:1:length(tab)/2
-    mfprintf(fd,'%.0.2f & %.0.2f \\\\\n',tab(i),tab(i+length(tab)/2));
-    mfprintf(fd,'\\\hline\n');
+  mfprintf(fd,'%.f & %.f\\\\\n',tab(i),tab(i+length(tab)/2));
+  mfprintf(fd,'\\\hline\n');
 end;
-
 mfprintf(fd,'\\\end{tabular}\n');
 mfprintf(fd,'\\\end{center}\n');
 
