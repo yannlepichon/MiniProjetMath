@@ -47,4 +47,4 @@ clc
         end
     end
     
-mclose('all')
+exit
