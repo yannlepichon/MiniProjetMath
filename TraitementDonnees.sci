@@ -232,7 +232,9 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
     sigma=sqrt(Mu2);
     Fisher1=Mu3/sigma^3;
     Fisher2=Mu4/sigma^4-3;
-
+    
+    xs2pdf(0, 'plot.pdf');
+    
     //FIN DU TRAITEMENT//
 
 endfunction
