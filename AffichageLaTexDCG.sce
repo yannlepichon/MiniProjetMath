@@ -5,7 +5,7 @@ function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,F
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 
     // IINITIALISATION DU DOCUMENT PDF
-tab = read('DonneesContinuesGroupees.dat', -1, 2); // à commenter la ligne si le fonctionnement par appel de fonction est OK
+tab = read('DonneesContinuesGroupees.dat', 10, 2); // à commenter la ligne si le fonctionnement par appel de fonction est OK
 fd=mopen('AffichageLaTexDCG.tex','wt');
 mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{article}\n");
 //mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{amsart}\n");
@@ -18,35 +18,6 @@ mfprintf(fd,'\\\usepackage{graphicx}\n');
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
 
 mfprintf(fd,'\\\begin{document}\n');
-mfprintf(fd,'{ \\\huge Projet 3eme Annee} \n');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'\AUTEURS :');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,' Cadio Florent , Le Pichon Yann, Albouy Hugo,Ouatik Said');
-mfprintf(fd,'\\\\ Yildirim Herve, Merouane Mehdi, Rafidison michael \n');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'\\\dedicatory{A l intention de monsieur Ghorbanzadeh}\n');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'\\\begin{abstract}\n');
-mfprintf(fd,'\\\Resume Ce projet nous permettra de prendre en main Scilab et de generer une documentation propre avec le logiciel Latex\n');
-mfprintf(fd,'\\\end{abstract}\n');
-mfprintf(fd,'\\\maketitle\n');
-
-
-mfprintf(fd,'\\\section{Introduction}\n');
-mfprintf(fd,'\\\fin intro\n');
-
-
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
         // Affichage des données récupéré et traité //
@@ -57,9 +28,10 @@ mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\section{Traitement des DCG}\n');
 
-
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
     // AFFICHAGE DES DONNEES LU SUR LE FICHIER SOURCE
-
+    // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
+    
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\subsection{Valeurs du tableau}\n');
