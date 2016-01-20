@@ -70,7 +70,7 @@ mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
 for i=1:1:length(tab)/2
-  mfprintf(fd,'%.f & %.f\\\\\n',tab(i),tab(i+length(tab)/2));
+  mfprintf(fd,'%0.4f & %.f\\\\\n',tab(i),tab(i+length(tab)/2));
   mfprintf(fd,'\\\hline\n');
 end;
 mfprintf(fd,'\\\end{tabular}\n');
