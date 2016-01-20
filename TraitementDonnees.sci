@@ -65,10 +65,11 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         for i=1:length(tab2)
             tab2(i,2)=length(find(tab==tab2(i)));
         end
-
+        
+        figure(1)
         plot(min(tab2(:,1)),0);
         xrects([tab2(:,1)';tab2(:,2)';(0.1*ones(tab2(:,1)))';tab2(:,2)']);
-
+        xs2pdf(1, 'figure1.pdf');
 
         //*************************************//
         //                                     //
@@ -104,9 +105,10 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
             sommeMu4=sommeMu4+data_weight(i)*(data(i)-X)^4;
         end
 
+        figure(2)
         plot(min(data),0);
         xrects([data';data_weight';(0.1*ones(data))';data_weight']);
-
+        xs2pdf(2, 'figure2.pdf');
 
         //*************************************//
         //                                     //
@@ -155,9 +157,10 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         for i=1:length(tab2)
             tab2(i,2)=length(find(tab==tab2(i)));
         end
-
+        
+        figure(3)
         bar(tab2(:,1),tab2(:,2));
-
+        xs2pdf(3, 'figure3.pdf');
 
         //*************************************//
         //                                     //
@@ -207,8 +210,10 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
             sommeMu4=sommeMu4+data_weight(i)*(c(i)-X)^4;
         end
 
+        figure(4)
         plot(min(data),0);
         xrects([data';data_weight';(data2-data)';data_weight']);
+        xs2pdf(4, 'figure4.pdf');
     end
 
 
@@ -233,7 +238,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
     Fisher1=Mu3/sigma^3;
     Fisher2=Mu4/sigma^4-3;
     
-    xs2pdf(0, 'plot.pdf');
+    
     
     //FIN DU TRAITEMENT//
 
