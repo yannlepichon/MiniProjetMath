@@ -34,7 +34,7 @@ clc
             AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
     
         case 4 then     //Données Continues groupés
-        chemin='DonneesContinuesGroupees3.dat';
+        chemin='DonneesDiscretesGroupees3.dat';
         //Appel du traitement des données
             exec('TraitementDonnees.sci', -1);
             [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data);
