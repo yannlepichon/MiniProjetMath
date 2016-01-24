@@ -44,8 +44,8 @@ mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
 for i=1:1:length(tab)/5
-        mfprintf(fd,'%d & %d & %d & %d & %d\\\\\n',tab(i),tab(i+10),tab(i+20),tab(i+30),tab(i+40));
-        mfprintf(fd,'\\\hline\n');
+    mfprintf(fd,'%d & %d & %d & %d & %d\\\\\n',tab(i),tab(i+10),tab(i+20),tab(i+30),tab(i+40));
+    mfprintf(fd,'\\\hline\n');
 end;
 
 mfprintf(fd,'\\\end{tabular}\n');
