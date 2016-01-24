@@ -162,7 +162,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         
         figure(3)
         bar(tab2(:,1),tab2(:,2));
-        xtitle('Titre','Axe X','Axe Y');
+        xtitle('Données Continues Non Groupées','Données','Effectifs');
         xs2pdf(3, 'figure3.pdf');
 
         //*************************************//
