@@ -44,4 +44,4 @@ clc
         end
     end
     
-//exit   //Décommenter si vous voulez que scilab ce ferme automatiquement
+exit   //Décommenter si vous voulez que scilab ce ferme automatiquement
