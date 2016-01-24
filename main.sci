@@ -15,7 +15,7 @@ clc
             exec('AffichageLaTexDDNG_pdf.sce', -1);
             AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
     
-        case 2 then     //Données Directes groupés
+        case 2 then     //Données Discretes groupés
         chemin='DonneesDiscretesGroupees.dat';
         //Appel du traitement des données
             exec('TraitementDonnees.sci', -1);
