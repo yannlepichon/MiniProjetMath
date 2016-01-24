@@ -34,13 +34,15 @@ mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\subsection{Valeurs du tableau}\n');
 
 mfprintf(fd,'\\\begin{center}\n');
-mfprintf(fd,'\\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\n');
+mfprintf(fd,'\\\begin{tabular}{|c|c|c|c|c|}\n');
+mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'\\\multicolumn{5}{c|}{Xi} \\\\\n');
 mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
-for i=1:1:length(tab)/2
-  mfprintf(fd,'%0.2f\t',tab(i));
-  //mfprintf(fd,'\\\hline\n');
+for i=1:1:length(tab)/5
+  mfprintf(fd,'%0.3f & %0.3f &%0.3f &%0.3f &%0.3f\\\\\n',tab(i),tab(i+20),tab(i+40),tab(i+60),tab(i+80));
+  mfprintf(fd,'\\\hline\n');
 end;
 mfprintf(fd,'\\\end{tabular}\n');
 mfprintf(fd,'\\\end{center}\n');
