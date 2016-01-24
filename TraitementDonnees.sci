@@ -1,4 +1,4 @@
-function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
+function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data,nb_classe) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
 
 
     select type_data
@@ -67,9 +67,9 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         end
         
         figure(1)
-        plot(min(tab2(:,1)),0);
+        plot(min(tab2(:,1)-1),0);
+        plot2d3(tab2(:,1),tab2(:,2));
         xtitle('Données Discrètes Non Groupées','Données','Effectifs');
-        xrects([tab2(:,1)';tab2(:,2)';(0.1*ones(tab2(:,1)))';tab2(:,2)']);
         xs2pdf(1, 'figure1.pdf');
 
         //*************************************//
@@ -107,9 +107,10 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         end
 
         figure(2)
-        plot(min(data),0);
+        //plot(min(data),0);
+        plot2d3(data,data_weight);
         xtitle('Données Discrètes Groupées','Données','Effectifs');
-        xrects([data';data_weight';(0.1*ones(data))';data_weight']);
+        //xrects([data';data_weight';(0.1*ones(data))';data_weight']);
         xs2pdf(2, 'figure2.pdf');
 
         //*************************************//
@@ -160,8 +161,22 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
             tab2(i,2)=length(find(tab==tab2(i)));
         end
         
+                largeur=(max(tab2(:,1))-min(tab2(:,1)))/nb_classe;
+        for i = 1:nb_classe
+            pt_rect(i)=tab2(1,1)+(i-1)*largeur;
+            largeur_rect(i)=largeur;
+        end
+        for i = 1:nb_classe-1
+            test3(i)=max(find(tab2(:,1)<=pt_rect(i+1)));
+        end
+        test3=[0;test3;length(tab2(:,1))];
+        for i=1:nb_classe
+            pt_rect(i,2)=sum(tab2(1+test3(i):test3(1+i),2));
+        end
+        
         figure(3)
-        bar(tab2(:,1),tab2(:,2));
+        plot(min(data),0);
+        xrects([pt_rect(:,1)';pt_rect(:,2)';largeur_rect';pt_rect(:,2)']);
         xtitle('Données Continues Non Groupées','Données','Effectifs');
         xs2pdf(3, 'figure3.pdf');
 
