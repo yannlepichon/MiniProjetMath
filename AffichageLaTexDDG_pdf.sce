@@ -38,7 +38,9 @@ mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\subsection{Valeurs du tableau}\n');
 
 mfprintf(fd,'\\\begin{center}\n');
-mfprintf(fd,'\\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\n');
+mfprintf(fd,'\\\begin{tabular}{|c|c|}\n');
+mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'Xi & Ni\\\\\n');
 mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
