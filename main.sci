@@ -4,10 +4,7 @@ clc
     
     for type_data= 1:1:4
         
-        //Appel de l'affichage LaTex
-            exec('AffichageLaTexIntro.sce', -1);
-            AffichageLaTexIntro(); 
-            
+          
         select type_data 
         case 1 then     //Données Directes non groupés
         chemin='DonneesDiscretesNonGroupees.dat';
