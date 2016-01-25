@@ -10,10 +10,10 @@ clc
         chemin='DonneesDiscretesNonGroupees.dat';
         //Appel du traitement des données
             exec('TraitementDonnees.sci', -1);
-            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data,nb_classe);
+            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max]=TraitementDonnees(chemin,type_data,nb_classe);
         //Appel de l'affichage LaTex pdf
             exec('AffichageLaTexDDNG_pdf.sce', -1);
-            AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
+            AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);
          //Appel de l'affichage LaTex html
          //   exec('AffichageLaTexDDNG_html.sce', -1);
          //   AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
@@ -22,10 +22,10 @@ clc
         chemin='DonneesDiscretesGroupees.dat';
         //Appel du traitement des données
             exec('TraitementDonnees.sci', -1);
-            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data,nb_classe);
+            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max]=TraitementDonnees(chemin,type_data,nb_classe);
         //Appel de l'affichage LaTex pdf
             exec('AffichageLaTexDDG_pdf.sce', -1);
-            AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);     
+            AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);     
         //Appel de l'affichage LaTex html
         //    exec('AffichageLaTexDDG_html.sce', -1);
         //    AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);     
@@ -35,10 +35,10 @@ clc
         chemin='DonneesContinuesNonGroupees.dat';
         //Appel du traitement des données
             exec('TraitementDonnees.sci', -1);
-            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data,nb_classe);
+            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max]=TraitementDonnees(chemin,type_data,nb_classe);
         //Appel de l'affichage LaTex pdf
             exec('AffichageLaTexDCNG_pdf.sce', -1);
-            AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
+            AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);   
         //Appel de l'affichage LaTex html
         //    exec('AffichageLaTexDCNG_html.sce', -1);
         //    AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
@@ -48,12 +48,12 @@ clc
         chemin='DonneesContinuesGroupees3.dat';
         //Appel du traitement des données
             exec('TraitementDonnees.sci', -1);
-            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data,nb_classe);
+            [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max]=TraitementDonnees(chemin,type_data,nb_classe);
         //Appel de l'affichage LaTex pdf
             exec('AffichageLaTexDCG_pdf.sce', -1);
-            AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);    
+            AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);    
         //Appel de l'affichage LaTex html
-        //   exec('AffichageLaTexDCG_html.sce', -1);
+        //    exec('AffichageLaTexDCG_html.sce', -1);
         //    AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);    
         end
     end
