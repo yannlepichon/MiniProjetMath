@@ -9,10 +9,14 @@ pdfLatex AffichageLaTexDCNG.tex
 pdfLatex AffichageLaTexDCG.tex
 pdfLatex AffichageLaTexDCG.tex
 
-REM htLatex AffichageLaTexDDG.tex
-REM htLatex AffichageLaTexDCG.tex
-REM htLatex AffichageLaTexDDNG.tex
-REM htLatex AffichageLaTexDCNG.tex
+htLatex AffichageLaTexDDG.tex
+htLatex AffichageLaTexDDG.tex
+htLatex AffichageLaTexDCG.tex
+htLatex AffichageLaTexDCG.tex
+htLatex AffichageLaTexDDNG.tex
+htLatex AffichageLaTexDDNG.tex
+htLatex AffichageLaTexDCNG.tex
+htLatex AffichageLaTexDCNG.tex
 
 del /s .\*.toc
 del /s .\*.aux
@@ -25,11 +29,8 @@ del /s .\*.4tc
 del /s .\*.dvi
 del /s .\*.idv
 del /s .\*.4ct
-del /s .\figure1.pdf
-del /s .\figure2.pdf
-del /s .\figure3.pdf
-del /s .\figure4.pdf
-del /s .\figure1_jpeg.jpg
-del /s .\figure2_jpeg.jpg
-del /s .\figure3_jpeg.jpg
-del /s .\figure4_jpeg.jpg
+del /s .\*.ps
+REM del /s .\figure1.png
+REM del /s .\figure2.png
+REM del /s .\figure3.png
+REM del /s .\figure4.png
