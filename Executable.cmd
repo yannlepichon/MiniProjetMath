@@ -4,7 +4,7 @@ pdfLatex AffichageLaTexDDNG.tex
 pdfLatex AffichageLaTexDDG.tex
 pdfLatex AffichageLaTexDCNG.tex
 pdfLatex AffichageLaTexDCG.tex
-
+ 
 "C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe" "AffichageLaTexDDNG.pdf"
 
 "C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe" "AffichageLaTexDDG.pdf"
