@@ -162,7 +162,7 @@ mfprintf(fd,'\\\end{center}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\subsection{Histogrammes}\n');
-mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4_jpeg.jpg}\n');
+mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4.png}\n');
 
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
