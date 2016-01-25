@@ -4,7 +4,7 @@ function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,F
         //       Mise en page et présentation       //
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 
-    // IINITIALISATION DU DOCUMENT PDF
+    // IINITIALISATION DU DOCUMENT HTML
 //tab = read('DonneesContinuesGroupees3.dat', 10, 2); // à commenter la ligne si le fonctionnement par appel de fonction est OK
 fd=mopen('AffichageLaTexDCG_html.tex','wt');
 mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{article}\n");
@@ -26,7 +26,6 @@ mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'includegraphics[scale=0.5]{Scilab_logo.jpg}\n');
 mfprintf(fd,'\\\');
-mfprintf(fd,'\includegraphics[scale=0.5]{LaTeX_logo.jpg}\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\AUTEURS :\n');
 mfprintf(fd,'\\\');
@@ -58,15 +57,9 @@ mfprintf(fd,'pagestyle{plain}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\section{Introduction}\n');
-mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modélisation statistique, celle-ci concerne les Données Continues Groupées. Ce document fait suite à une demande réalisée par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de dernière année du cycle ingénieur.');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-
-mfprintf(fd,'La présente demande, est de développer et de réaliser un outil de modélisation statistique à l’aide du logiciel Scilab. A partir de fichiers contenant des données, nous devons effectuer différents traitements statistiques,  estimations et modélisations et les afficher à l’aide de Latex en format pdf et html.');
-mfprintf(fd,'\\\');
-mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'Lors de ce projet, nous aurons à mettre en pratique  les notions théoriques acquises ces deux dernières années.');
-
+mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
+mfprintf(fd,'La presente demande, est de developper et de realiser un outil de modelisation statistique a l’aide du logiciel Scilab. A partir de fichiers contenant des donnees, nous devons effectuer differents traitements statistiques,  estimations et modelisations et les afficher a l’aide de Latex en format pdf et html.');
+mfprintf(fd,'Lors de ce projet, nous aurons a mettre en pratique  les notions theoriques acquises ces deux dernieres annees.');
 mfprintf(fd,'\\\');
 mfprintf(fd,'\pagebreak \n');
 
@@ -129,23 +122,23 @@ if (H~='null') then
     mfprintf(fd,'Moyennes Harmonique & % 0.2f \\\\\n',H);
     mfprintf(fd,'\\\hline\n');
 end
-mfprintf(fd,'Ecart Moyen arithmétique & % 0.2f \\\\\n',e);
+mfprintf(fd,'Ecart Moyen arithmetique & % 0.2f \\\\\n',e);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment dordre 1 & % 0.2f \\\\\n',M1);
+mfprintf(fd,'Moment d ordre 1 & % 0.2f \\\\\n',M1);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment dordre 2 & % 0.2f \\\\\n',M2);
+mfprintf(fd,'Moment d ordre 2 & % 0.2f \\\\\n',M2);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment dordre 3 & % 0.2f \\\\\n',M3);
+mfprintf(fd,'Moment d ordre 3 & % 0.2f \\\\\n',M3);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment dordre 4 & % 0.2f \\\\\n',M4);
+mfprintf(fd,'Moment d ordre 4 & % 0.2f \\\\\n',M4);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centre dordre 1 & % 0.2f \\\\\n',Mu1);
+mfprintf(fd,'Moment centre d ordre 1 & % 0.2f \\\\\n',Mu1);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centre dordre 2 & % 0.2f \\\\\n',Mu2);
+mfprintf(fd,'Moment centre d ordre 2 & % 0.2f \\\\\n',Mu2);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centre dordre 3 & % 0.2f \\\\\n',Mu3);
+mfprintf(fd,'Moment centre d ordre 3 & % 0.2f \\\\\n',Mu3);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centre dordre 4 & % 0.2f \\\\\n',Mu4);
+mfprintf(fd,'Moment centre d ordre 4 & % 0.2f \\\\\n',Mu4);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Ecart-type & %.2f \\\\\n',sigma);
 mfprintf(fd,'\\\hline\n');
@@ -164,8 +157,9 @@ mfprintf(fd,'\\\end{center}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\subsection{Histogrammes}\n');
+mfprintf(fd,'\\\begin{center}\n');
 mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4.png}\n');
-
+mfprintf(fd,'\\\end{center}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
