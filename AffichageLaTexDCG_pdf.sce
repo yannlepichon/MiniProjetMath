@@ -1,4 +1,4 @@
-function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);// Il faut appeler la fonctionner avec le parametre "tab" en plus
+function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);// Il faut appeler la fonctionner avec le parametre "tab" en plus
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
         //       Mise en page et presentation       //
@@ -115,6 +115,10 @@ mfprintf(fd,'\\\begin{tabular}{|l|r|}\n');
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moyennes & Resultats \\\\\n');
 mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'Min & % 0.2f \\\\\n',val_min);
+mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'Max & % 0.2f \\\\\n',val_max);
+mfprintf(fd,'\\\hline\n');
 if(G~='null') then
     mfprintf(fd,'Moyennes Geometrique & % 0.2f \\\\\n',G);
     mfprintf(fd,'\\\hline\n');
@@ -141,15 +145,16 @@ mfprintf(fd,'Moment centre dordre 2 & % 0.2f \\\\\n',Mu2);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moment centre dordre 3 & % 0.2f \\\\\n',Mu3);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centre dordre 4 & % 0.2f \\\\\n',Mu4);
+mfprintf(fd,'Moment centré dordre 4 & %.2f \\\\\n',Mu4);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Sigma & % 0.2f \\\\\n',sigma);
+mfprintf(fd,'Ecart-type & %.2f \\\\\n',sigma);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Fisher1 & % 0.2f \\\\\n',Fisher1);
+mfprintf(fd,'Variance & %.2f \\\\\n',Mu2);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Fisher2 & % 0.2f \\\\\n',Fisher2);
+mfprintf(fd,'Fisher1 & %.2f \\\\\n',Fisher1);
 mfprintf(fd,'\\\hline\n');
-
+mfprintf(fd,'Fisher2 & %.2f \\\\\n',Fisher2);
+mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'\\\end{tabular}\n');
 mfprintf(fd,'\\\end{center}\n');
 
@@ -159,7 +164,7 @@ mfprintf(fd,'\\\end{center}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\subsection{Histogrammes}\n');
-mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4}\n');
+mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4.pdf}\n');
 
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
