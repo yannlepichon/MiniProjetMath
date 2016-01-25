@@ -16,16 +16,59 @@ mfprintf(fd,'\\\usepackage{amssymb}\n');
 mfprintf(fd,'\\\usepackage{graphicx}\n');
 
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
-
 mfprintf(fd,'\\\begin{document}\n');
 
-        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-        // Affichage des données récupéré et traité //
-        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
+mfprintf(fd,'\\\')
+mfprintf(fd,'begin{center}\n');
+mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'includegraphics[scale=0.5]{Scilab_logo}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'\includegraphics[scale=0.5]{LaTeX_logo}\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\AUTEURS :\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,' Cadio Florent , Le Pichon Yann, Albouy Hugo,Ouatik Said');
+mfprintf(fd,'\\\\ Yildirim Herve, Merouane Mehdi, Rafidison michael \n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'end{center}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'textbf{Resume} Ce projet nous permettra de prendre en main Scilab et de generer une documentation propre avec le logiciel Latex\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'\pagebreak \n');
+
+mfprintf(fd,'\\\');
+mfprintf(fd,'tableofcontents \n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'cleardoublepage\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'pagestyle{plain}\n');
+
 
 
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\section{Introduction}\n');
+mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Discrete Non Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+
+mfprintf(fd,'La presente demande, est de developper et de realiser un outil de modelisation statistique a l aide du logiciel Scilab. A partir de fichiers contenant des donnees, nous devons effectuer differents traitements statistiques,  estimations et modelisations et les afficher a l aide de Latex en format pdf et html.');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'Lors de ce projet, nous aurons a mettre en pratique  les notions theoriques acquises ces deux dernieres annees.');
+
+mfprintf(fd,'\\\');
+mfprintf(fd,'\pagebreak \n');
 mfprintf(fd,'\\\section{Traitement des DDNG}\n');
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
@@ -44,8 +87,8 @@ mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
 for i=1:1:length(tab)/5
-    mfprintf(fd,'%d & %d & %d & %d & %d\\\\\n',tab(i),tab(i+10),tab(i+20),tab(i+30),tab(i+40));
-    mfprintf(fd,'\\\hline\n');
+        mfprintf(fd,'%d & %d & %d & %d & %d\\\\\n',tab(i),tab(i+10),tab(i+20),tab(i+30),tab(i+40));
+        mfprintf(fd,'\\\hline\n');
 end;
 
 mfprintf(fd,'\\\end{tabular}\n');
