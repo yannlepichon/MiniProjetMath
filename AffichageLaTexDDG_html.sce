@@ -17,6 +17,10 @@ mfprintf(fd,'\\\usepackage{graphicx}\n');
 
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
 mfprintf(fd,'\\\begin{document}\n');
+
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
+        // Affichage des données récupéré et traité //
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 mfprintf(fd,'\\\')
 mfprintf(fd,'begin{center}\n');
 mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
@@ -149,3 +153,19 @@ mfprintf(fd,'Fisher2 & %.2f \\\\\n',Fisher2);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'\\\end{tabular}\n');
 mfprintf(fd,'\\\end{center}\n');
+
+
+    // AFFICHAGE DES HISTOGRAMME
+    
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\subsection{Histogrammes}\n');
+mfprintf(fd,'\\\includegraphics[scale=0.75]{figure2.png}\n');
+
+    // FERMETURE ET MISE A JOUR DU FICHIER LATEX
+    
+mfprintf(fd,'\\\end{document}\n');
+mclose('AffichageLaTexDDG_html.tex');
+
+
+endfunction
