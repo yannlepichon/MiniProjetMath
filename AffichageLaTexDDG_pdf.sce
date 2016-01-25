@@ -6,7 +6,7 @@ function AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,F
 
     // IINITIALISATION DU DOCUMENT PDF
 //tab = read('DonneesContinuesNonGroupees.dat', 10, 2); // à commenter la ligne si le fonctionnement par appel de fonction est OK
-fd=mopen('AffichageLaTexDDG.tex','wt');
+fd=mopen('AffichageLaTexDDG_pdf.tex','wt');
 mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{article}\n");
 //mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{amsart}\n");
 
