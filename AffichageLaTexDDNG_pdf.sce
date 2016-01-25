@@ -6,7 +6,7 @@ function AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,
 
     // IINITIALISATION DU DOCUMENT PDF
 
-fd=mopen('AffichageLaTexDDNG.tex','wt');
+fd=mopen('AffichageLaTexDDNG_pdf.tex','wt');
 mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{article}\n");
 //mfprintf(fd,"\\\documentclass[a4paper,12pt,reqno]{amsart}\n");
 
