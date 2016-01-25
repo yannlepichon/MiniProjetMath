@@ -116,3 +116,4 @@ mclose('AffichageLaTexDDG.tex');
 
 
 endfunction
+ 
