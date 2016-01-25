@@ -1,22 +1,22 @@
 "C:\Program Files\scilab-5.5.2\bin\WScilex.exe" -f main.sci
 
-pdfLatex AffichageLaTexDDNG.tex
-pdfLatex AffichageLaTexDDNG.tex
-pdfLatex AffichageLaTexDDG.tex
-pdfLatex AffichageLaTexDDG.tex
-pdfLatex AffichageLaTexDCNG.tex
-pdfLatex AffichageLaTexDCNG.tex
-pdfLatex AffichageLaTexDCG.tex
-pdfLatex AffichageLaTexDCG.tex
+pdfLatex AffichageLaTexDDNG_pdf.tex
+pdfLatex AffichageLaTexDDNG_pdf.tex
+pdfLatex AffichageLaTexDDG_pdf.tex
+pdfLatex AffichageLaTexDDG_pdf.tex
+pdfLatex AffichageLaTexDCNG_pdf.tex
+pdfLatex AffichageLaTexDCNG_pdf.tex
+pdfLatex AffichageLaTexDCG_pdf.tex
+pdfLatex AffichageLaTexDCG_pdf.tex
 
-htLatex AffichageLaTexDDG.tex
-htLatex AffichageLaTexDDG.tex
-htLatex AffichageLaTexDCG.tex
-htLatex AffichageLaTexDCG.tex
-htLatex AffichageLaTexDDNG.tex
-htLatex AffichageLaTexDDNG.tex
-htLatex AffichageLaTexDCNG.tex
-htLatex AffichageLaTexDCNG.tex
+htLatex AffichageLaTexDDG_html.tex
+htLatex AffichageLaTexDDG_html.tex
+htLatex AffichageLaTexDCG_html.tex
+htLatex AffichageLaTexDCG_html.tex
+htLatex AffichageLaTexDDNG_html.tex
+htLatex AffichageLaTexDDNG_html.tex
+htLatex AffichageLaTexDCNG_html.tex
+htLatex AffichageLaTexDCNG_html.tex
 
 del /s .\*.toc
 del /s .\*.aux
