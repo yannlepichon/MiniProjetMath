@@ -9,10 +9,10 @@ pdfLatex AffichageLaTexDCNG.tex
 pdfLatex AffichageLaTexDCG.tex
 pdfLatex AffichageLaTexDCG.tex
 
-htLatex AffichageLaTexDDG.tex
-htLatex AffichageLaTexDCG.tex
-htLatex AffichageLaTexDDNG.tex
-htLatex AffichageLaTexDCNG.tex
+REM htLatex AffichageLaTexDDG.tex
+REM htLatex AffichageLaTexDCG.tex
+REM htLatex AffichageLaTexDDNG.tex
+REM htLatex AffichageLaTexDCNG.tex
 
 del /s .\*.toc
 del /s .\*.aux
