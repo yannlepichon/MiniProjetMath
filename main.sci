@@ -15,8 +15,8 @@ clc
             exec('AffichageLaTexDDNG_pdf.sce', -1);
             AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
          //Appel de l'affichage LaTex html
-            exec('AffichageLaTexDDNG_html.sce', -1);
-            AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
+         //   exec('AffichageLaTexDDNG_html.sce', -1);
+         //   AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
             
         case 2 then     //Données Discretes groupés
         chemin='DonneesDiscretesGroupees.dat';
@@ -27,8 +27,8 @@ clc
             exec('AffichageLaTexDDG_pdf.sce', -1);
             AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);     
         //Appel de l'affichage LaTex html
-            exec('AffichageLaTexDDG_html.sce', -1);
-            AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);     
+        //    exec('AffichageLaTexDDG_html.sce', -1);
+        //    AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);     
     
     
         case 3 then     //Données Continues non groupés
@@ -40,8 +40,8 @@ clc
             exec('AffichageLaTexDCNG_pdf.sce', -1);
             AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
         //Appel de l'affichage LaTex html
-            exec('AffichageLaTexDCNG_html.sce', -1);
-            AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
+        //    exec('AffichageLaTexDCNG_html.sce', -1);
+        //    AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
     
     
         case 4 then     //Données Continues groupés
@@ -53,8 +53,8 @@ clc
             exec('AffichageLaTexDCG_pdf.sce', -1);
             AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);    
         //Appel de l'affichage LaTex html
-            exec('AffichageLaTexDCG_html.sce', -1);
-            AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);    
+        //   exec('AffichageLaTexDCG_html.sce', -1);
+        //    AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);    
         end
     end
     
