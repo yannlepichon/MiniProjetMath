@@ -1,4 +1,4 @@
-function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);// Il faut appeler la fonctionner avec le paramètre "tab" en plus
+function AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);// Il faut appeler la fonctionner avec le paramètre "tab" en plus
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
         //       Mise en page et présentation       //
@@ -58,20 +58,20 @@ mfprintf(fd,'pagestyle{plain}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\section{Introduction}\n');
-mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
+mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modélisation statistique, celle-ci concerne les Données Continues Groupées. Ce document fait suite à une demande réalisée par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de dernière année du cycle ingénieur.');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 
-mfprintf(fd,'La presente demande, est de developper et de realiser un outil de modelisation statistique a l aide du logiciel Scilab. A partir de fichiers contenant des donnees, nous devons effectuer differents traitements statistiques,  estimations et modelisations et les afficher a l aide de Latex en format pdf et html.');
+mfprintf(fd,'La présente demande, est de développer et de réaliser un outil de modélisation statistique à l’aide du logiciel Scilab. A partir de fichiers contenant des données, nous devons effectuer différents traitements statistiques,  estimations et modélisations et les afficher à l’aide de Latex en format pdf et html.');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
-mfprintf(fd,'Lors de ce projet, nous aurons a mettre en pratique  les notions theoriques acquises ces deux dernieres annees.');
+mfprintf(fd,'Lors de ce projet, nous aurons à mettre en pratique  les notions théoriques acquises ces deux dernières années.');
 
 mfprintf(fd,'\\\');
 mfprintf(fd,'\pagebreak \n');
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-        // Affichage des donnees recupere et traite //
+        // Affichage des données récupéré et traité //
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 
 mfprintf(fd,'\\\');
@@ -129,7 +129,7 @@ if (H~='null') then
     mfprintf(fd,'Moyennes Harmonique & % 0.2f \\\\\n',H);
     mfprintf(fd,'\\\hline\n');
 end
-mfprintf(fd,'Ecart Moyen arithmetique & % 0.2f \\\\\n',e);
+mfprintf(fd,'Ecart Moyen arithmétique & % 0.2f \\\\\n',e);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moment dordre 1 & % 0.2f \\\\\n',M1);
 mfprintf(fd,'\\\hline\n');
@@ -145,7 +145,7 @@ mfprintf(fd,'Moment centre dordre 2 & % 0.2f \\\\\n',Mu2);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moment centre dordre 3 & % 0.2f \\\\\n',Mu3);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centré dordre 4 & %.2f \\\\\n',Mu4);
+mfprintf(fd,'Moment centre dordre 4 & % 0.2f \\\\\n',Mu4);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Ecart-type & %.2f \\\\\n',sigma);
 mfprintf(fd,'\\\hline\n');
@@ -169,7 +169,6 @@ mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4.png}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
-mclose('AffichageLaTexDCG.tex');
+mclose('AffichageLaTexDCG_html.tex');
 
 endfunction
- 
