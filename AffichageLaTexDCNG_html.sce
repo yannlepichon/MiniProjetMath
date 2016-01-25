@@ -1,4 +1,4 @@
-function AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);// Il faut appeler la fonctionner avec le paramètre "tab" en plus
+function AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);// Il faut appeler la fonctionner avec le paramètre "tab" en plus
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
         //       Mise en page et présentation       //
@@ -15,12 +15,6 @@ mfprintf(fd,'\\\usepackage{amssymb}\n');
 mfprintf(fd,'\\\usepackage{graphicx}\n');
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
 mfprintf(fd,'\\\begin{document}\n');
-
-        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-        // Affichage des données récupéré et traité //
-        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-
-
 mfprintf(fd,'\\\')
 mfprintf(fd,'begin{center}\n');
 mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
@@ -61,7 +55,7 @@ mfprintf(fd,'pagestyle{plain}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\section{Introduction}\n');
-mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Non Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
+mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 
@@ -76,7 +70,6 @@ mfprintf(fd,'\pagebreak \n');
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
         // Affichage des données récupéré et traité //
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-
 
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
@@ -158,6 +151,7 @@ mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'\\\end{tabular}\n');
 mfprintf(fd,'\\\end{center}\n');
 
+
     // AFFICHAGE DES HISTOGRAMME
     
 mfprintf(fd,'\\\');
@@ -168,8 +162,7 @@ mfprintf(fd,'\\\includegraphics[scale=0.75]{figure3.png}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
-mclose('AffichageLaTexDCNG.tex');
+mclose('AffichageLaTexDCNG_html.tex');
 
 
 endfunction
- 
