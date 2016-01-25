@@ -145,7 +145,7 @@ mfprintf(fd,'Moment centre dordre 2 & % 0.2f \\\\\n',Mu2);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moment centre dordre 3 & % 0.2f \\\\\n',Mu3);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Moment centré dordre 4 & %.2f \\\\\n',Mu4);
+mfprintf(fd,'Moment centre dordre 4 & %.2f \\\\\n',Mu4);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Ecart-type & %.2f \\\\\n',sigma);
 mfprintf(fd,'\\\hline\n');
@@ -169,7 +169,6 @@ mfprintf(fd,'\\\includegraphics[scale=0.75]{figure4.png}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
-mclose('AffichageLaTexDCG.tex');
+mclose('AffichageLaTexDCG_pdf.tex');
 
 endfunction
- 
