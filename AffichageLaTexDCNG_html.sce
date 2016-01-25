@@ -21,6 +21,63 @@ mfprintf(fd,'\\\begin{document}\n');
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 
 
+mfprintf(fd,'\\\')
+mfprintf(fd,'begin{center}\n');
+mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'includegraphics[scale=0.5]{Scilab_logo}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'\includegraphics[scale=0.5]{LaTeX_logo}\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\AUTEURS :\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,' Cadio Florent , Le Pichon Yann, Albouy Hugo,Ouatik Said');
+mfprintf(fd,'\\\\ Yildirim Herve, Merouane Mehdi, Rafidison michael \n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'end{center}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'textbf{Resume} Ce projet nous permettra de prendre en main Scilab et de generer une documentation propre avec le logiciel Latex\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'\pagebreak \n');
+
+mfprintf(fd,'\\\');
+mfprintf(fd,'tableofcontents \n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'cleardoublepage\n');
+mfprintf(fd,'\\\');
+mfprintf(fd,'pagestyle{plain}\n');
+
+
+
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'\\\section{Introduction}\n');
+mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Non Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+
+mfprintf(fd,'La presente demande, est de developper et de realiser un outil de modelisation statistique a l aide du logiciel Scilab. A partir de fichiers contenant des donnees, nous devons effectuer differents traitements statistiques,  estimations et modelisations et les afficher a l aide de Latex en format pdf et html.');
+mfprintf(fd,'\\\');
+mfprintf(fd,'newparagraphe{}\n');
+mfprintf(fd,'Lors de ce projet, nous aurons a mettre en pratique  les notions theoriques acquises ces deux dernieres annees.');
+
+mfprintf(fd,'\\\');
+mfprintf(fd,'\pagebreak \n');
+
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
+        // Affichage des données récupéré et traité //
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
+
+
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\section{Traitement des DCNG}\n');
@@ -62,6 +119,10 @@ mfprintf(fd,'\\\begin{tabular}{|l|r|}\n');
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moyennes & Resultats \\\\\n');
 mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'Min & % 0.2f \\\\\n',val_min);
+mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'Max & % 0.2f \\\\\n',val_max);
+mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moyennes Geometrique & %.2f \\\\\n',G);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moyennes Arithmetique & %.2f \\\\\n',X);
@@ -86,7 +147,9 @@ mfprintf(fd,'Moment centré dordre 3 & %.2f \\\\\n',Mu3);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Moment centré dordre 4 & %.2f \\\\\n',Mu4);
 mfprintf(fd,'\\\hline\n');
-mfprintf(fd,'Sigma & %.2f \\\\\n',sigma);
+mfprintf(fd,'Ecart-type & %.2f \\\\\n',sigma);
+mfprintf(fd,'\\\hline\n');
+mfprintf(fd,'Variance & %.2f \\\\\n',Mu2);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'Fisher1 & %.2f \\\\\n',Fisher1);
 mfprintf(fd,'\\\hline\n');
@@ -94,7 +157,6 @@ mfprintf(fd,'Fisher2 & %.2f \\\\\n',Fisher2);
 mfprintf(fd,'\\\hline\n');
 mfprintf(fd,'\\\end{tabular}\n');
 mfprintf(fd,'\\\end{center}\n');
-
 
     // AFFICHAGE DES HISTOGRAMME
     
