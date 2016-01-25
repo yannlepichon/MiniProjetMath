@@ -128,7 +128,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_mi
         a.box="off";
         plot2d3(data,data_weight);
         xtitle('Données Discrètes Groupées','Données','Effectifs');
-        xs2png(f, 'figure2.png');
+        xs2png(2, 'figure2.png');
 
         //*************************************//
         //                                     //
@@ -203,7 +203,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_mi
         a.box="off";
         xrects([pt_rect(:,1)';pt_rect(:,2)';largeur_rect';pt_rect(:,2)']);
         xtitle('Données Continues Non Groupées','Données','Effectifs');
-        xs2png(f, 'figure3.png');
+        xs2png(3, 'figure3.png');
 
         //*************************************//
         //                                     //
@@ -265,7 +265,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_mi
         a.box="off";
         xtitle('Données Continues Groupées','Données','Effectifs');
         xrects([data';data_weight';(data2-data)';data_weight']);
-        xs2png(f, 'figure4.png');
+        xs2png(4, 'figure4.png');
     end
 
 
@@ -295,5 +295,4 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_mi
     //FIN DU TRAITEMENT//
 
 endfunction
- 
  
