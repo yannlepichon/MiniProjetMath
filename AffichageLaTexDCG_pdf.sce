@@ -172,3 +172,4 @@ mfprintf(fd,'\\\end{document}\n');
 mclose('AffichageLaTexDCG.tex');
 
 endfunction
+ 
