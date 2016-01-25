@@ -73,6 +73,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         plot2d3(tab2(:,1),tab2(:,2));
         xtitle('Données Discrètes Non Groupées','Données','Effectifs');
         xs2pdf(1, 'figure1.pdf');
+        xs2jpg(1, 'figure1_jpeg.jpg');
 
         //*************************************//
         //                                     //
@@ -115,6 +116,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         plot2d3(data,data_weight);
         xtitle('Données Discrètes Groupées','Données','Effectifs');
         xs2pdf(2, 'figure2.pdf');
+        xs2jpg(2, 'figure2_jpeg.jpg');
 
         //*************************************//
         //                                     //
@@ -184,6 +186,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         xrects([pt_rect(:,1)';pt_rect(:,2)';largeur_rect';pt_rect(:,2)']);
         xtitle('Données Continues Non Groupées','Données','Effectifs');
         xs2pdf(3, 'figure3.pdf');
+        xs2jpg(3, 'figure3_jpeg.jpg');
 
         //*************************************//
         //                                     //
@@ -240,6 +243,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         xtitle('Données Continues Groupées','Données','Effectifs');
         xrects([data';data_weight';(data2-data)';data_weight']);
         xs2pdf(4, 'figure4.pdf');
+        xs2jpg(4, 'figure4_jpeg.jpg');
     end
 
 
