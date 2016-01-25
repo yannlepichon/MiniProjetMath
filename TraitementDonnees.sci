@@ -1,4 +1,4 @@
-function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=TraitementDonnees(chemin,type_data,nb_classe) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
+function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max]=TraitementDonnees(chemin,type_data,nb_classe) //Création d'une fonction nommée EcartMoyenArith prenant en arguments d'entrée un tableau contenant des données et éventuellement des poids sur ces données, et un type de données (groupées, non groupées, etc). La valeur de l'écart moyen sera enregistrée et retournée sous le nom de variable 'e'.
 
 
     select type_data
@@ -39,6 +39,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         data=tab(:,1); //On récupère la 1ere colonne du tableau, celle qui contient les données. Dans le cas de données groupées le tableau dispose d'une deuxième colonne contenant le poids des valeurs.
         n=length(data); //Permet de récupérer le nombre de valeurs
         no_GH=0;
+        val_min=min(tab(:,1));
+        val_max=max(tab(:,1));
 
         for i=1:n
             sommeMX=sommeMX+data(i);
@@ -87,6 +89,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         n=sum(data_weight); //Permet de récupérer le nombre de valeurs
         k=length(data);
         no_GH=0;
+        val_min=min(tab(:,1));
+        val_max=max(tab(:,1));
 
         for i=1:k
             sommeMX=sommeMX+data_weight(i)*data(i);
@@ -128,6 +132,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
 
         data=tab(:,1);
         n=length(data);
+        val_min=min(tab(:,1));
+        val_max=max(tab(:,1));
 
         //test=sign(data);
         //test2=find(test==-1);
@@ -166,7 +172,7 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
             tab2(i,2)=length(find(tab==tab2(i)));
         end
         
-                largeur=(max(tab2(:,1))-min(tab2(:,1)))/nb_classe;
+        largeur=(max(tab2(:,1))-min(tab2(:,1)))/nb_classe;
         for i = 1:nb_classe
             pt_rect(i)=tab2(1,1)+(i-1)*largeur;
             largeur_rect(i)=largeur;
@@ -201,6 +207,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         data_weight=tab(:,3);
         n=sum(data_weight);
         k=length(data);
+        val_min=min((data+data2)/2);
+        val_max=max((data+data2)/2);
 
         //test=sign(data);
         //test2=find(test==-1);
