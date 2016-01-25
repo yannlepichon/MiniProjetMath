@@ -68,6 +68,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         
         figure(1)
         plot(min(tab2(:,1)-1),0);
+        a=gca();
+        a.box="off";
         plot2d3(tab2(:,1),tab2(:,2));
         xtitle('Données Discrètes Non Groupées','Données','Effectifs');
         xs2pdf(1, 'figure1.pdf');
@@ -107,10 +109,11 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         end
 
         figure(2)
-        //plot(min(data),0);
+        plot(min(data)-1,0);
+        a=gca();
+        a.box="off";
         plot2d3(data,data_weight);
         xtitle('Données Discrètes Groupées','Données','Effectifs');
-        //xrects([data';data_weight';(0.1*ones(data))';data_weight']);
         xs2pdf(2, 'figure2.pdf');
 
         //*************************************//
@@ -176,6 +179,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
         
         figure(3)
         plot(min(data),0);
+        a=gca();
+        a.box="off";
         xrects([pt_rect(:,1)';pt_rect(:,2)';largeur_rect';pt_rect(:,2)']);
         xtitle('Données Continues Non Groupées','Données','Effectifs');
         xs2pdf(3, 'figure3.pdf');
@@ -230,6 +235,8 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab]=Trait
 
         figure(4)
         plot(min(data),0);
+        a=gca();
+        a.box="off";
         xtitle('Données Continues Groupées','Données','Effectifs');
         xrects([data';data_weight';(data2-data)';data_weight']);
         xs2pdf(4, 'figure4.pdf');
