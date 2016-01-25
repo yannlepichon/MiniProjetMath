@@ -12,11 +12,11 @@ clc
             exec('TraitementDonnees.sci', -1);
             [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max]=TraitementDonnees(chemin,type_data,nb_classe);
         //Appel de l'affichage LaTex pdf
-            exec('AffichageLaTexDDNG_pdf.sce', -1);
+            exec('AffichageLaTexDDNG_pdf.sce', -1);    
             AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);
          //Appel de l'affichage LaTex html
             exec('AffichageLaTexDDNG_html.sce', -1);
-            AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);
+            AffichageLaTexDDNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);
             
         case 2 then     //Données Discretes groupés
         chemin='DonneesDiscretesGroupees.dat';
@@ -28,7 +28,7 @@ clc
             AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);     
         //Appel de l'affichage LaTex html
             exec('AffichageLaTexDDG_html.sce', -1);
-            AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);     
+            AffichageLaTexDDG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);     
     
     
         case 3 then     //Données Continues non groupés
@@ -41,7 +41,7 @@ clc
             AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);   
         //Appel de l'affichage LaTex html
             exec('AffichageLaTexDCNG_html.sce', -1);
-            AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);   
+            AffichageLaTexDCNG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);   
     
     
         case 4 then     //Données Continues groupés
@@ -54,10 +54,9 @@ clc
             AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);    
         //Appel de l'affichage LaTex html
             exec('AffichageLaTexDCG_html.sce', -1);
-            AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab);    
+            AffichageLaTexDCG(X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_min,val_max);    
         end
     end
     
 exit   //Décommenter si vous voulez que scilab ce ferme automatiquement
- 
  
