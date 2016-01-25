@@ -13,10 +13,8 @@ mfprintf(fd,'\\\usepackage{amsmath}\n');
 mfprintf(fd,'\\\usepackage{amsfonts}\n');
 mfprintf(fd,'\\\usepackage{amssymb}\n');
 mfprintf(fd,'\\\usepackage{graphicx}\n');
-
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
 mfprintf(fd,'\\\begin{document}\n');
-
 mfprintf(fd,'\\\')
 mfprintf(fd,'begin{center}\n');
 mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
@@ -57,7 +55,7 @@ mfprintf(fd,'pagestyle{plain}\n');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 mfprintf(fd,'\\\section{Introduction}\n');
-mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Non Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
+mfprintf(fd,'Ceci est une partie du compte rendu du mini projet de modelisation statistique, celle-ci concerne les Donnees Continues Groupees. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur.');
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
 
@@ -70,9 +68,8 @@ mfprintf(fd,'\\\');
 mfprintf(fd,'\pagebreak \n');
 
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-        // Affichage des données récupéré et traité //
+        // Affichage des donnees recupere et traite //
         // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
-
 
 mfprintf(fd,'\\\');
 mfprintf(fd,'newparagraphe{}\n');
@@ -165,8 +162,7 @@ mfprintf(fd,'\\\includegraphics[scale=0.75]{figure3.png}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
-mclose('AffichageLaTexDCNG.tex');
+mclose('AffichageLaTexDCNG_pdf.tex');
 
 
 endfunction
- 
