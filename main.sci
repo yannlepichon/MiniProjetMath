@@ -1,6 +1,6 @@
 clear
 clc
-//Fichier en entré
+//Fichier en entré 
     
     for type_data= 1:1:4
         
