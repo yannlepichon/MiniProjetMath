@@ -60,3 +60,4 @@ clc
     
 exit   //Décommenter si vous voulez que scilab ce ferme automatiquement
  
+ 
