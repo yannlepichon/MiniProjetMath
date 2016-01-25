@@ -17,7 +17,6 @@ mfprintf(fd,'\\\usepackage{graphicx}\n');
 
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
 mfprintf(fd,'\\\begin{document}\n');
-
 mfprintf(fd,'\\\')
 mfprintf(fd,'begin{center}\n');
 mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
@@ -87,8 +86,8 @@ mfprintf(fd,'\\\hline\n');
 
 //construction du tableau avec les valeur de tab (=valeur lu a partir du fichier)
 for i=1:1:length(tab)/5
-        mfprintf(fd,'%d & %d & %d & %d & %d\\\\\n',tab(i),tab(i+10),tab(i+20),tab(i+30),tab(i+40));
-        mfprintf(fd,'\\\hline\n');
+    mfprintf(fd,'%d & %d & %d & %d & %d\\\\\n',tab(i),tab(i+10),tab(i+20),tab(i+30),tab(i+40));
+    mfprintf(fd,'\\\hline\n');
 end;
 
 mfprintf(fd,'\\\end{tabular}\n');
@@ -160,8 +159,7 @@ mfprintf(fd,'\\\includegraphics[scale=0.75]{figure1.png}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
-mclose('AffichageLaTexDDNG.tex');
+mclose('AffichageLaTexDDNG_pdf.tex');
 
 
 endfunction
- 
