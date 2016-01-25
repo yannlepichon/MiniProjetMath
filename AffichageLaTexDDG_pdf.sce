@@ -18,6 +18,9 @@ mfprintf(fd,'\\\usepackage{graphicx}\n');
 mfprintf(fd,'\\newcommand{\\newparagraphe}[1]{\\paragraph{#1}\\mbox{}\\\\}\n');
 mfprintf(fd,'\\\begin{document}\n');
 
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
+        // Affichage des données récupéré et traité //
+        // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% //
 mfprintf(fd,'\\\')
 mfprintf(fd,'begin{center}\n');
 mfprintf(fd,'{ \\\huge Projet Latex/Scilab} \n');
@@ -162,8 +165,7 @@ mfprintf(fd,'\\\includegraphics[scale=0.75]{figure2.png}\n');
     // FERMETURE ET MISE A JOUR DU FICHIER LATEX
     
 mfprintf(fd,'\\\end{document}\n');
-mclose('AffichageLaTexDDG.tex');
+mclose('AffichageLaTexDDG_pdf.tex');
 
 
 endfunction
- 
