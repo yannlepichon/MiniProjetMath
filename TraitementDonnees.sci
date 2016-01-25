@@ -282,3 +282,4 @@ function [X,Q,G,H,e,M1,M2,M3,M4,Mu1,Mu2,Mu3,Mu4,sigma,Fisher1,Fisher2,tab,val_mi
 
 endfunction
  
+ 
