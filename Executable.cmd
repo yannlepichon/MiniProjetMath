@@ -12,6 +12,7 @@ pdfLatex AffichageLaTexDCG.tex
 del /s .\*.toc
 del /s .\*.aux
 del /s .\*.log
+del /s .\*.tex
 del /s .\figure1.pdf
 del /s .\figure2.pdf
 del /s .\figure3.pdf
