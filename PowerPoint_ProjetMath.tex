@@ -5,23 +5,23 @@
 \usepackage[latin1]{inputenc}
 \usepackage[]{amsmath}
 \usepackage[]{amssymb}
+ \setcounter{tocdepth}{1}
 
 \usetheme{Warsaw}
 
 
 \title[Présentation Projet Latex 2016]{Présentation Projet Latex 2016}
 \author{SETI 3e Année}
-\institute {Cadio Florent,\\
-Le Pichon Yann,\\
+\institute {\normalsize Cadio Florent,\\
+ Le Pichon Yann,\\
 Albouy Hugo,\\
-Ouatik Said,\\
 Yildirim Herve,\\
 Merouane Mehdi,\\
-Rafidison michael}
+Rafidison Michael,\\}
 
 \date{25 Janvier 2016}
 \begin{document}
- 
+
 \begin{frame}
 \titlepage
 	\begin{columns}[b]
@@ -53,7 +53,7 @@ Rafidison michael}
 \AtBeginSection[]
 {
   \begin{frame}
-  \frametitle{Première Partie}
+  \frametitle{Sommaire}
   \tableofcontents[currentsection]
   \end{frame} 
 }
@@ -61,20 +61,21 @@ Rafidison michael}
 \begin{frame}[label=Introduction]
 
 \frametitle{Introduction}
-\begin{beamerboxesrounded}[shadow=true]{Partie1}
+\begin{beamerboxesrounded}[shadow=true]{Partie 1 : Traitement données}
 		\begin{itemize}
-			\item Présentation Scilab
-			\item Présentation Latex
-			\item Présentation générale du Projet
+			\item Présentation Traitement
+			\item Affichage Latex PDF
+			\item Affichage Latex HTML
 		\end{itemize}
 \end{beamerboxesrounded}
 \pause
-\begin{beamerboxesrounded}[shadow=true]{Partie2}
+\begin{beamerboxesrounded}[shadow=true]{Partie 2 : Estimateur}
 	\begin{itemize}
 			\setbeamertemplate{itemize item}[ball]
-			\item ??????
-			\item !!!!!!
-			\item @@@@@@
+			\item Résolution du système d'équation
+			\item Transcodage pour estimer les différents paramètres
+			\item Sauvegarde des échantillons dans les nouveaux fichiers .dat
+			\item Regénérer partie 1 à partir de ces nouveaux fichiers
 		\end{itemize}
 \end{beamerboxesrounded}
 \end{frame}
@@ -84,13 +85,13 @@ Rafidison michael}
 \AtBeginSection[]
 {
   \begin{frame}
-  \frametitle{Première Partie}
+  \frametitle{Sommaire}
   \tableofcontents[currentsection]
   \end{frame} 
 }
 \section{Présentation du Projet}
 
-\subsection{Executable}
+\subsection{ Executable}
 \begin{frame}[label=Executable]
 \frametitle{Script batch d'éxécution}
 \begin{beamerboxesrounded}[shadow=true]{Executable}
@@ -104,7 +105,7 @@ Rafidison michael}
 \end{frame}
 
 
-\subsection{Main}
+\subsection{ Main}
 \begin{frame}[label=Main]
 \frametitle{Fonction Main}
 \begin{beamerboxesrounded}[shadow=true]{Main}
@@ -116,14 +117,14 @@ Rafidison michael}
 \end{frame}
 
 
-\subsection{Données d'entrées}
+\subsection{ Données d'entrées}
 \begin{frame}[label=Données]
 \frametitle{Données d'entrées}
 \begin{beamerboxesrounded}[shadow=true]{Données}
 		\begin{enumerate}
-			\item Données Continues Groupées (DCG)
-			\item Données Continues Non Groupées (DCNG)
-			\item Données Discrètes Groupées (DDG)
+			\item Données Continues Groupées (DCG)\\
+			\item Données Continues Non Groupées (DCNG)\\
+			\item Données Discrètes Groupées (DDG)\\
 			\item Données Discrètes Non Groupées (DDNG)
 		\end{enumerate}
 \end{beamerboxesrounded}
@@ -161,51 +162,47 @@ Rafidison michael}
 \AtBeginSection[]
 {
   \begin{frame}
-  \frametitle{Résultats}
+  \frametitle{Sommaire}
   \tableofcontents[currentsection]
   \end{frame} 
 }
-\section{Résultats}
+\section{Résultats Partie 1}
 \begin{frame}[label=Résultats]
-\frametitle{Résultats obtenus}
+\frametitle{Résultats Partie 1}
 \begin{beamerboxesrounded}[shadow=true]{Fonction 1 : DCG}
 	\begin{itemize}
-			\item Données Continue Groupées
-			\item Calcul de ???
+			\item \small Données Continue Groupées
+			\item \small Calcul des paramètres et affichage de l'histogramme
 	\end{itemize}
 \end{beamerboxesrounded}
 
 \begin{beamerboxesrounded}[shadow=true]{Fonction 2 : DCNG}
 	\begin{itemize}
-			\item Données Continue Non Groupées
-			\item Calcul de ????
+			\item \small Données Continue Non Groupées
+			\item \small Calcul des paramètres et affichage de l'histogramme
 	\end{itemize}
 \end{beamerboxesrounded}
 
 \begin{beamerboxesrounded}[shadow=true]{Fonction 3 : DDG}
 	\begin{itemize}
-			\item Données Discrètes Groupées
-			\item Calcul de ????
+			\item \small Données Discrètes Groupées
+			\item \small Calcul des paramètres et affichage de l'histogramme
 	\end{itemize}
 \end{beamerboxesrounded}
 
 \begin{beamerboxesrounded}[shadow=true]{Fonction 4 : DDNG}
 	\begin{itemize}
-			\item Données Discrète Non Groupées
-			\item Calcul de ????
+			\item \small Données Discrète Non Groupées
+			\item \small Calcul des paramètres et affichage de l'histogramme
 	\end{itemize}
 \end{beamerboxesrounded}
 \end{frame}
 
-\subsection{Fonction 1 : DCG}
+\subsection{ Fonction 1 : DCG}
 \begin{frame}[label=Fonction 1 : DCG]
 \frametitle{Fonction 1 : DCG}
 \begin{beamerboxesrounded}[shadow=true]{Données Continues Groupées}
-		\begin{enumerate}
-			\item Tableau
-			\item Image
-			\includegraphics[width=70mm,height=40mm]{canard.jpg}		
-		\end{enumerate}
+\includegraphics[scale=0.45]{TableauxDCG}\\
 \end{beamerboxesrounded}
 \end{frame}
 
@@ -214,11 +211,7 @@ Rafidison michael}
 \begin{frame}[label=Fonction 2 : DCNG]
 \frametitle{Fonction 2 : DCNG}
 \begin{beamerboxesrounded}[shadow=true]{Données Continues Non Groupées}
-		\begin{enumerate}
-			\item Tableau
-			\item Image
-			\includegraphics[width=70mm,height=40mm]{canard.jpg}		
-		\end{enumerate}
+	\includegraphics[scale=0.35]{TableauxDCNG}\\
 \end{beamerboxesrounded}
 \end{frame}
 
@@ -227,11 +220,7 @@ Rafidison michael}
 \begin{frame}[label=Fonction 3 : DDG]
 \frametitle{Fonction 3 : DDG}
 \begin{beamerboxesrounded}[shadow=true]{Données Discrètes Groupées}
-		\begin{enumerate}
-			\item Tableau
-			\item Image
-			\includegraphics[width=70mm,height=40mm]{canard.jpg}		
-		\end{enumerate}
+			\includegraphics[scale=0.4]{TableauxDDG}\\
 \end{beamerboxesrounded}
 \end{frame}
 
@@ -240,19 +229,40 @@ Rafidison michael}
 \begin{frame}[label=Fonction 4 : DDNG]
 \frametitle{Fonction 4 : DDNG}
 \begin{beamerboxesrounded}[shadow=true]{Données Discrètes Non Groupées}
-		\begin{enumerate}
-			\item Tableau
-			\item Image
-			\includegraphics[width=70mm,height=40mm]{canard.jpg}		
-		\end{enumerate}
+	\includegraphics[scale=0.4]{TableauxDDNG}\\
 \end{beamerboxesrounded}
 \end{frame}
-
 
 \AtBeginSection[]
 {
   \begin{frame}
-  \frametitle{Conclusion}
+  \frametitle{Sommaire}
+  \tableofcontents[currentsection]
+  \end{frame} 
+}
+
+\section{Résultats Partie 2}
+
+\subsection{DCNG mu}
+\begin{frame}[label=Fonction 1 : DCNG avec estimation de mu]
+\frametitle{Fonction 1 : DCNG avec estimation de mu}
+\begin{beamerboxesrounded}[shadow=true]{Données Continues Non Groupées}
+\includegraphics[scale=0.25]{TableauxDCNGp2}\\
+\end{beamerboxesrounded}
+\end{frame}
+
+\subsection{DCNG sigma}
+\begin{frame}[label=Fonction 2 : DCNG avec estimation de sigma]
+\frametitle{Fonction 2 : DCNG avec estimation de Sigma}
+\begin{beamerboxesrounded}[shadow=true]{Données Continues Non Groupées}
+\includegraphics[scale=0.35]{TableauxDCNGp2sigma}\\
+\end{beamerboxesrounded}
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+  \frametitle{Sommaire}
   \tableofcontents[currentsection]
   \end{frame} 
 }
