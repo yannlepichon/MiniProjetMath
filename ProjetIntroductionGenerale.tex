@@ -9,83 +9,149 @@
 { \huge Projet Latex/Scilab} 
 \newparagraphe{}
 \includegraphics[scale=0.5]{Scilab_logo}
+\\
+\\
+\includegraphics[scale=0.5]{LaTeX_logo}
 \newparagraphe{}
 AUTEURS :
 \newparagraphe{}
- Cadio Florent , Le Pichon Yann, Albouy Hugo,Ouatik Said\\ Yildirim Herve, Merouane Mehdi, Rafidison michael 
+ Cadio Florent , Le Pichon Yann, Albouy Hugo,ouatik said\\ Yildirim Herve, Merouane Mehdi, Rafidison Michael 
 \newparagraphe{}
-\newparagraphe{}
-\newparagraphe{}
-{ A l intention de monsieur Ghorbanzadeh} 
 \end{center}
 \newparagraphe{}
-Resume Ce projet nous permettra de prendre en main Scilab et de generer une documentation propre avec le logiciel Latex via le traitement de fichiers de donnees
+\textbf{R\'esum\'e} Ce projet nous permettra de prendre en main Scilab et de g\'en\'erer une documentation propre avec le logiciel Latex via le traitement de fichiers de donn\'ees
 \pagebreak 
 \tableofcontents 
 \cleardoublepage
 \pagestyle{plain}
 \newparagraphe{}
 \section{Introduction}
-Ceci est une introduction generale au projet de modelisation statistique, elle presentera les differentes donnees utilisees et le travail qui a ete effectue. Ce document fait suite a une demande realisee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derniere annee du cycle ingenieur. 
+Ceci est une introduction g\'en\'erale au projet de mod\'elisation statistique, elle pr\'esentera les diff\'erentes donn\'ees utilis\'ees et le travail qui a \'et\'e effectu\'e. Ce document fait suite \`{a} une demande r\'ealis\'ee par monsieur Dariush Ghorbanzadeh, dans le cadre du projet de derni\`{e}re ann\'ee du cycle ing\'enieur. 
 \newparagraphe{}
-La presente demande, est de developper et de realiser un outil de modélisation statistique a l aide du logiciel Scilab. A partir de fichiers contenant des donnees, nous devons effectuer differents traitements statistiques,  estimations et modelisations et les afficher a l aide de Latex en format pdf et html.
+La pr\'esente demande, est de d\'evelopper et de r\'ealiser un outil de mod\'elisation statistique \`{a} l\'\ aide du logiciel Scilab. A partir de fichiers contenant des donn\'ees, nous devons effectuer diff\'erents traitements statistiques,  estimations et mod\'elisations et les afficher \`{a} l\'\ aide de Latex en format pdf et html.
 \newparagraphe{}
-Lors de ce projet, nous aurons a mettre en pratique  les notions theoriques acquises lors de ces deux dernieres annees.
+Lors de ce projet, nous aurons \`{a} mettre en pratique  les notions th\'eoriques acquises lors de ces deux derni\`{e}res ann\'ees.
 \pagebreak 
 
 \section{Organisation du travail}
 \newparagraphe{}
-
-inserer ici le msproject + le travail de chacun
+\includegraphics[scale=0.8]{MSprojectv1}\\
 \pagebreak 
 
-\section{Presentation du projet}
+\section{Pr\'esentation du projet}
 \newparagraphe{}
 
-Le projet est divise en deux grandes parties distinctes, dans la premiere il s agit de traiter quatre types de donnees et de calculer différentes informations les concernant, et dans la seconde il s agit de mettre en place un estimateur BLABLABLA.
+Le projet est divis\'e en deux grandes parties distinctes, la premi\`{e}re permet de traiter quatre types de donn\'ees et de calculer diff\'erentes informations les concernant, et la seconde consiste \`{a} l\'\ utilisation de l\'\ Estimateur Maximum de Vraissemblance, ce qui nous permettra de remplacer les donn\'ees qui figurent sur les fichiers .Dat par des donn\'ees estim\'ees.
 
-\subsection{Partie 1 : }
+\subsection{Partie 1 : Traitement des donnees }
 \newparagraphe{}
-Nous allons par la suite traiter quatre types de donnees : donnees continues/discretes groupees, et donnees continues/discretes non groupees. 
-Tout d abord definissons ce qu est une donnee continue, et ce qu est une donnee discrete. Puis nous expliquerons la difference entre des donnees groupees, et des non groupees.
+Nous allons par la suite traiter quatre types de donn\'ees : donn\'ees continues/discr\`{e}tes group\'ees, et donn\'ees continues/discr\`{e}tes non group\'ees. 
+Tout d\'\ abord d\'efinissons ce qu\'\ est une donn\'ee continue, et ce qu\'\ est une donn\'ee discr\`{e}te. Puis nous expliquerons la diff\'erence entre des donn\'ees group\'ees, et des non group\'ees.
 \\
 \\
 
-\textbf{Donnees continues} :
-\\Une variable continue peut prendre, en theorie, une infinite des valeurs, formant un ensemble continu.\\
+\textbf{Donn\'ees continues} :
+\\Une variable continue peut prendre, en th\'eorie, une infinit\'e de valeurs, formant un ensemble continu.\\
 
-\textbf{Donnees discretes} :
-\\Une variable discrete a une valeur finie. Il est possible de les enumerer (  1, 2, 3,… ).\\ 
+\textbf{Donn\'ees discr\`{e}tes} :
+\\Une variable discr\`{e}te \`{a} une valeur finie. Il est possible de les \'enum\'erer (  1, 2, 3,Š).\\ 
 
-\textbf{Donnees groupees} :
-\\Une donnee est dite groupee lorsqu elle a été triee en fonction d autres parametres  par exemple le nombre de fois que celle-ci est utilise (effectif).\\
+\textbf{Donn\'ees group\'ees} :
+\\Une donn\'ee est dite group\'ee lorsqu elle a \'et\'e tri\'ee en fonction d\'\ autres param\`{e}tres  par exemple le nombre de fois que celle-ci est utilis\'ee (effectif).\\
 
-\textbf{Donnees non groupees} :
-\\Une donnee est dite non groupee lorsqu elle n a pas ete triee en fonction d un autre parametre, elle sera exprimee sur une seule colonne dans un tableau de donnee.\\
+\textbf{Donn\'ees non group\'ees} :
+\\Une donn\'ee est dite non group\'ee lorsqu\'\ elle n\'\ a pas \'et\'e tri\'ee en fonction d\'\ un autre param\`{e}tre, elle sera exprim\'ee sur une seule colonne dans un tableau de donn\'ee.\\
 
 
-\subsubsection{moyenne geometrique}
+\subsubsection{moyenne g\'eom\'etrique}
 \includegraphics[scale=0.5]{moyennegeo}\\
 
 \subsubsection{moyenne quadratique}
 \includegraphics[scale=0.5]{moyennequadratique}\\
 
-\subsubsection{moyenne arithmetique}
+\subsubsection{moyenne arithm\'etique}
 \includegraphics[scale=0.5]{moyennearithmetique}\\
 
 \subsubsection{moyenne harmonique}
 \includegraphics[scale=0.5]{moyenneharmonique}\\
 
-\subsubsection{moment d ordre n}
+\subsubsection{moment d\'\ ordre n}
 \includegraphics[scale=0.5]{momentdordre}\\
 
-\subsubsection{moment centre d ordre n}
+\subsubsection{moment centr\'e d\'\ ordre n}
 \includegraphics[scale=0.5]{momentcentredordre}\\
 
 \newparagraphe{}
-\subsection{Resultats obtenus}
+\pagebreak
+
+\subsection{Partie 2 : estimateur }
+\newparagraphe{}
+
+Cette seconde partie est d\'ecompos\'ee en deux sous parties, la th\'eorie puis la simulation.\\
+L\'\ objectif de cette seconde partie est de r\'esoudre un syst\`{e}me d\'\ \'equation qui permettra de fournir les estimateurs.\\
+Puis nous transformons nos \'equations en code Scilab pour estimer les param\`{e}tres mu, c, sigma et k.\\
+Puis nous sauvegardons les \'echantillons des param\`{e}tres dans un fichier .dat.\\
+Et pour finir nous utilisons ces nouvelles donn\'ees calcul\'ees \`{a} la place des fichiers .dat initiaux.\\
+
+\subsubsection{Partie Th\'eorique : R\'esolution de l\'\ \'equation }\\
+\\
+\\
+\\
+\textbf{ Vraisemblance associ\'ee} :\\
+\includegraphics[scale=0.75]{vraisemblanceassocie}\\\\
+
+\textbf{ Log Vraisemblance associ\'ee au mod\`{e}le} :\\
+\includegraphics[scale=0.75]{logvraisemblanceassocie}\\
+\\
+\pagebreak
+
+\textbf{ Estimateurs du maximum de vraisemblance - D\'eriv\'ees} :
+\\
+\\
+$ \frac{\delta}{\delta\mu} l(X,\Theta,k) = \frac{1}{\sigma^2} \sum_{i = 1}^k X_i - \mu + \frac{1}{c^2\sigma^2} \sum_{i = k+1}^n (X_i - \mu)\\
 
 
-\subsection{Histogrammes}
+$ \frac{\delta}{\delta\sigma^2} l(X,\Theta,k) = \frac{-n}{2\sigma^2} + \frac{1}{2(\sigma^2)^2} \sum_{i = 1}^k (X_i - \mu)^2
+$ \frac{1}{2 c^2(\sigma^2)^2}  
+$ \sum_{i = k+1}^n (X_i - \mu)^2
+\\
+
+$\frac{\delta}{\delta c^2} l(X,\Theta,k) = -\frac{n-k}{2} \frac{1}{c^2} + \frac{1}{2 (c^2)^2\sigma^2} \sum_{i = k+1}^n (X_i - \mu)^2
+\\
+\\
+\\
+\\
+\textbf{ Estimateurs du maximum de vraisemblance - estimation des param\`{e}tres} :
+\\
+\\
+$ \mu = \frac{S_n + \frac{1}{c^2} S_{n-k}}{k + \frac{1}{c^2} (n-k)}
+\\
+$ c^2 = \frac{\mu(n-k)-S_{n-k}}{S_k - \mu k}
+\\
+\sigma^2 = \frac{\sum{X_i^2} + \mu^2(n-k) - 2\mu \sum{X_i}}{c^2(n-k)}
+
+
+\pagebreak
+
+
+
+\section{R\'esultat obtenus}
+\subsection{Partie 1 : }
+\subsubsection{DCG}
+\includegraphics[scale=0.75]{TableauxDCG}\\
+\subsubsection{DCNG}
+\includegraphics[scale=0.75]{TableauxDCNG}\\
+\subsubsection{DDG}
+\includegraphics[scale=0.75]{TableauxDDG}\\
+\subsubsection{DDNG}
+\includegraphics[scale=0.75]{TableauxDDNG}\\
+\pagebreak
+
+\subsection{Partie 2 : }
+\subsubsection{Donn\'ees Continues Non Group\'ees avec Estimation de mu}
+\includegraphics[scale=0.5]{TableauxDCNGp2}\\
+\subsubsection{Donn\'ees Continues Non Group\'ees avec Estimation de sigma}}
+\includegraphics[scale=0.5]{TableauxDCNGp2sigma}\\
+
 
 \end{document}
